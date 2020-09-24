@@ -1,0 +1,3 @@
+[submodule "LogAnalyzer"]
+	path = LogAnalyzer
+	url = https://github.com/diaven/ardupilot-LogAnalyzer.git
