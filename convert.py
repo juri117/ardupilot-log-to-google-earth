@@ -17,10 +17,12 @@ STYLE_COLORS = ["7f00ffff",
 
 
 def generate_kml(file_names):
+    if len(file_names) == 0:
+        return
     if len(file_names) > 1:
         out_f = open("out.kml", 'w')
     else:
-        out_f = open(file_name.replace(".bin", "") + ".kml", 'w')
+        out_f = open(file_names[0].replace(".bin", "") + ".kml", 'w')
     _write_kml(out_f, file_names)
     out_f.close()
 
@@ -75,7 +77,6 @@ def _write_kml(out_f, file_names):
 
 
 if __name__ == '__main__':
-    file_names = ["2020-09-04_0954_Labfly_2.bin",
-                  "2020-09-04_0959_Labfly_2.bin"]
+    file_names = ["00000002.BIN"]
     generate_kml(file_names)
     print("done")
